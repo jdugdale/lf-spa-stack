@@ -1,0 +1,23 @@
+{
+  "name": "esbuild-jstack",
+  "version": "1.0.0",
+  "description": "",
+  "main": "vue-plugin.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@vue/component-compiler-utils": "^3.2.0",
+    "esbuild": "^0.9.6",
+    "esbuild-vue": "^0.3.0",
+    "parse5": "^6.0.1",
+    "pug": "^3.0.2",
+    "typescript": "^4.2.3",
+    "vue": "^2.6.12",
+    "vue-class-component": "^7.2.6",
+    "vue-property-decorator": "^9.1.2",
+    "vue-template-compiler": "^2.6.12"
+  }
+}
