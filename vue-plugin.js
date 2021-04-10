@@ -49,7 +49,6 @@ let plugin = {
                         let template = pug.render(content.trim());
                         let cru = ccu.compileTemplate({ source: template, compiler });
                         render = cru.code;
-                        console.log(render);
                         break;
                     case 'script':
                         let raw = node.childNodes[0].value;

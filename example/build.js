@@ -1,4 +1,4 @@
-const vuePlugin = require('esbuild-jstack');
+const vuePlugin = require('lf-spa-stack');
 
 const ENV = process.env.NODE_ENV || 'development';
 const isDev = ENV === 'development';
