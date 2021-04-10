@@ -6,14 +6,6 @@ const ccu = require('@vue/component-compiler-utils');
 const os = require('os');
 const path = require('path');
 
-function serializeTemplate(node) {
-    const childNode = node.childNodes[0]
-    if (childNode && childNode.nodeName === '#document-fragment') {
-        return parse5.serialize(childNode)
-    }
-    return parse5.serialize(node)
-}
-
 function minCss(css) {
     return css
         .replace(/\s*([;:{}>])\s*/g, '$1')
@@ -50,14 +42,14 @@ let plugin = {
             const source = await fs.promises.readFile(args.path, "utf8");
             let render, script, className, style = '';
             const fragment = parse5.parseFragment(source);
-            //const fragment = parser.parseFragment(source);
             fragment.childNodes.forEach(function (node) {
                 switch (node.nodeName) {
                     case 'template':
-                        let content = serializeTemplate(node);
+                        let content = parse5.serialize(node.content);
                         let template = pug.render(content.trim());
                         let cru = ccu.compileTemplate({ source: template, compiler });
                         render = cru.code;
+                        console.log(render);
                         break;
                     case 'script':
                         let raw = node.childNodes[0].value;
