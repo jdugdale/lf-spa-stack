@@ -11,3 +11,4 @@ Add these commands to package.json/scripts:
 - "dev": "node build/build.js --watch"
 - "test": "node build/test.js"
 - "test-watch": "nodemon build/test.js -e ts,js"
+- "serve": "node build/serve.js & node build/build.js --watch"
