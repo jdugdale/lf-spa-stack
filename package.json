@@ -1,6 +1,6 @@
 {
   "name": "lf-spa-stack",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "",
   "main": "vue-plugin.js",
   "scripts": {
