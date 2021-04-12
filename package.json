@@ -1,10 +1,10 @@
 {
   "name": "lf-spa-stack",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "",
   "main": "vue-plugin.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "postinstall": "node -e \"try{require('./postinstall')}catch(e){}\""
   },
   "author": "",
   "license": "ISC",
