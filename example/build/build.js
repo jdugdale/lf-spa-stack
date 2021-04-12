@@ -5,9 +5,9 @@ const isDev = ENV === 'development';
 const watch = process.argv.indexOf("--watch") > -1;
 
 let config = {
-    entryPoints: ['./src/index.ts'],
+    entryPoints: ['../src/index.ts'],
     bundle: true,
-    outfile: './dist/bundle.js',
+    outfile: '../dist/bundle.js',
     plugins: [vuePlugin],
     logLevel: 'info',
     minify: !isDev,
