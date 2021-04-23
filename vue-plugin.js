@@ -46,7 +46,9 @@ let plugin = {
                 switch (node.nodeName) {
                     case 'template':
                         let content = parse5.serialize(node.content);
-                        let template = pug.render(content.trim());
+                        let template = content.trim();
+                        if(node.attrs.some(a => a.name === 'lang' && a.value === 'pug'))
+                            template = pug.render(content.trim());
                         let cru = ccu.compileTemplate({ source: template, compiler });
                         render = cru.code;
                         break;
